@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="em">
+    <head>
+        <title>Home page</title>
+        <meta charset="utf-8">     
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link href="home.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+                <div class="sidebar">
+                    <div class="content"><h1>Tables</h1>
+                        <div class="search-container" id="search-container">
+                        <input type="text" placeholder="Search Tables">
+                        </div>
+                        <div class="box" id="box">
+                            
+                            <div class="card" id="table1">
+                                <h1 class="itemname">&nbsp; Table-1</h1>
+                                    <h2> &nbsp;    Rs. <span id="table1-cost">0</span> | Total items:<span id="table1-count">0</span></h2>
+            
+                            </div>
+                            
+                            
+                            <div class="card" id="table2">
+                                <h1 class="itemname">&nbsp; Table-2</h1>
+                                <h2> &nbsp;    Rs. <span id="table2-cost">0</span> | Total items: <span id="table2-count">0</span></h2>
+                               
+                            </div>
+                
+                        
+                            <div class="card" id="table3">
+                                <h1 class="itemname">&nbsp; Table-3</h1>
+                                <h2>  &nbsp;   Rs. <span id="table3-cost">0</span> | Total items: <span id="table3-count">0</span></h2>
+                
+                            </div>
+                        
+                        </div>
+                </div>
+                </div>
+                <div class="sidebar1">
+                    <h1 class="content1">Menu</h1>
+                    <div class="search-item" id="search-item">
+                    <input type="text" placeholder="Search menu... by course by food">
+        </div>
+                    <div class="box1" id="box1" >
+                        <div class="card1" draggable="true">
+                            <h1 class="cardprice" id="chicken" draggable="true" itemtype="biryani"> &nbsp;  Special Chicken Biryani</h1>
+                            <h3 > &nbsp;   300</h3>
+                        </div>
+                        <div class="card1" draggable="true">
+                            <h1 class="cardprice" id="chicken1" draggable="true" itemtype="biryani">&nbsp; Dum Biryani</h1>
+                            <h3 >&nbsp; 200</h3>
+                        </div>
+                        <div class="card1" draggable="true">
+                            <h1 draggable="true" class="cardprice" id="chicken2" itemtype="biryani">&nbsp; Mixed Biryani</h1>
+                            <h3 >&nbsp; 250</h3>
+                        </div>
+                        <div class="card1" draggable="true">
+                            <h1 class="cardprice" id="chicken3" draggable="true" itemtype="curry">&nbsp; Paneer Butter Masala Curry</h1>
+                            <h3>&nbsp; 200</h3>
+                        </div>
+                        <div class="card1"  draggable="true">
+                            <h1 class="cardprice" id="chicken4" draggable="true" itemtype="starter">&nbsp; French Fries</h1>
+                            <h3>&nbsp; 180</h3>
+                        </div>
+                        <div class="card1" draggable="true">
+                            <h1 class="cardprice" id="chicken5" draggable="true" itemtype="starter">&nbsp; Chicken Lollipop </h1>
+                            <h3>&nbsp; 250</h3>
+                        </div>
+                        <div class="card1" draggable="true">
+                            <h1 class="cardprice" id="chicken6" draggable="true" itemtype="break-fast">&nbsp; Dosa</h1>
+                            <h3>&nbsp; 50</h3>
+                        </div>
+                        <div class="card1" draggable="true">
+                            <h1 class="cardprice" id="chicken7" draggable="true" itemtype="break-fast">&nbsp; Chapathi </h1>
+                            <h3>&nbsp; 40</h3>
+                        </div>
+                        <div class="card1" draggable="true">
+                            <h1 class="cardprice" id="chicken8" draggable="true" itemtype="dessert">&nbsp; Choco Brownie</h1>
+                            <h3>&nbsp; 200</h3>
+                        </div>
+                        <div class="card1" draggable="true">
+                            <h1 class="cardprice" id="chicken9" draggable="true" itemtype="dessert" >&nbsp; Red Velvet </h1>
+                            <h3>&nbsp; 180</h3>
+                        </div>
+                        <div class="card1"  draggable="true">
+                            <h1 class="cardprice" id="chicken10" draggable="true" itemtype="curry">&nbsp; Butter Chicken Curry </h1>
+                            <h3>&nbsp; 250</h3>
+                        </div>
+                        <div class="card1" draggable="true">
+                            <h1 class="cardprice" id="chicken11" draggable="true" itemtype="curry">&nbsp; Mutton Curry </h1>
+                            <h3>&nbsp; 350</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-summary-popup" id="table-popup">
+                <div class="order-summary-heading">
+                    <h2 class="order-summary-popup-title">Order Summary</h2>
+                    <span class="close-order-summary-popup" onclick="closeTablePopup()">&times;</span>
+                </div>
+                <div class="order-summary-popup-content">
+                    <table class="order-summary-table">
+                        <tr class="order-summary-head">
+                            <th>S.No</th>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th colspan="2">Number of Servings</th>
+                            <th>Delete</th>
+                        </tr>
+                    </table>
+                    <p class="order-summary-total">Total amount:Rs.<span id="table-cost"></span></p>
+                    <button type="button" class="session-close" onclick="closeTablePopup()">Close Session(Generate Bill)</button>
+                </div>
+            </div>
+        <script src="home.js">
+        </script>
+    </body>
+</html>
